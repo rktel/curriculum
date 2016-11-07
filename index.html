@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="App">
+<head>
+	<meta charset="UTF-8">
+	<title>Curriculum Vitae</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body ng-controller="CV">
+	<div class="mdl-grid">
+	  <div class="mdl-cell mdl-cell--4-col">
+	  	<br><br>
+	  	<div class="padding-left-img"><img class="image-cropper" ng-src="{{foto}}" alt="foto"/></div>
+	  	<div class="name-bold-main padding-left-name" ng-bind="person.firstName"></div>
+	  	<div class="name-bold-main padding-left-name" ng-bind="person.lastName"></div>
+	  </div>
+	  <div class="mdl-cell mdl-cell--8-col">
+	  	<h4 class="name-bold" ng-bind="titles.perfil"></h4>
+	  	<p align="justify" ng-bind="person.description"></p>
+	  	<hr>
+	  	<p class="mdl-navigation__link"><i class="mdl-color-text--blue-grey-400 material-icons">place</i> {{person.location}}</p>
+	  	<p class="mdl-navigation__link"><i class="mdl-color-text--blue-grey-400 material-icons">phone</i> {{person.phone}}</p>
+	  	<p class="mdl-navigation__link"><i class="mdl-color-text--blue-grey-400 material-icons">email</i> {{person.email}}</p>
+	  	<p class="mdl-navigation__link"><i class="mdl-color-text--blue-grey-400 material-icons">accessibility</i> {{person.age}}</p>
+	  	<hr>
+	  </div>
+	  <div>
+	  	<div>
+	  		<h4 class="padding-left-title name-bold" ng-bind="titles.formacion"></h4>
+	  		<h5 class="padding-left-subtitle">UNIVERSIDAD RICARDO PALMA</h5>
+	  		<h5 class="padding-left-subtitle">[ 2015 ] Ingeniero en Ingeniería Electrónica. </h5>
+	  		<h5 class="padding-left-subtitle">[ 2003 - 2008 ] Bachiller en Ingeniería Electrónica. </h5>
+	  	</div>
+	  	<div>
+	  		<h4 class="padding-left-title name-bold" ng-bind="titles.experiencia"></h4>
+	  		<h5 class="padding-left-subtitle">[ 01/2015 – 01/2016 ] HUNTER LOJACK PERU</h5>
+	  		<h5 class="padding-left-subtitle">Área: Investigación y Desarrollo</h5>
+	  		<h5 class="padding-left-subtitle">Cargo: Supervisor Junior de Investigación Técnica y Productos</h5>
+	  		<h6 class="padding-left-line">Desarrollo de nuevos proyectos en conjunto con las áreas de Taller y Soporte Técnico.</h6>
+	  		<h6 class="padding-left-line">Homologación de dispositivos de monitoreo vehicular y personal al servidor de Hunter.</h6>
+	  		<h6 class="padding-left-line">Generación de aplicaciones Móviles Internas.</h6>
+	  		<h6 class="padding-left-line">Presentación de los nuevos productos ante los clientes.</h6>
+	  		<h6 class="padding-left-line">Capacitación y entrenamiento al personal de Área Técnica.</h6>
+	  		<h6 class="padding-left-line">Soporte a las áreas de: Técnica, Logística, Taller, Soporte técnico, TI y Mantenimiento.</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">[ 10/2008 – 12/2014 ] HUNTER LOJACK PERU</h5>
+	  		<h5 class="padding-left-subtitle" class="padding-left-subtitle">Área: Técnica.</h5>
+	  		<h5 class="padding-left-subtitle" class="padding-left-subtitle">Cargos: Supervisor Senior, Supervisor Junior, Asistente Junior</h5>
+	  		<h6 class="padding-left-line">Ensamblaje de antenas con tecnología Lojack (Radiofrecuencia) a nivel nacional.</h6>
+	  		<h6 class="padding-left-line">Ensamblaje e instalación antenas móviles con tecnología Lojack en vehículos de rastreo.</h6>
+	  		<h6 class="padding-left-line">Mantenimiento a las antenas y vehículos con tecnología Lojack.</h6>
+	  		<h6 class="padding-left-line">Generación de scripts y programación de equipos de monitoreo GPS/GPRS, satelital e híbridos.</h6>
+	  		<h6 class="padding-left-line">Capacitación y entrenamiento de nuevo personal.</h6>
+	  		<h6 class="padding-left-line">Soporte a las áreas de: Logística y Taller.</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">[ 01/2006 - 06/2006 ] UNIVERSIDAD RICARDO PALMA</h5>
+	  		<h5 class="padding-left-subtitle">Área: Laboratorio de Circuitos y Dispositivos</h5>
+	  		<h5 class="padding-left-subtitle">Cargo: Asistente</h5>
+	  		<h6 class="padding-left-line">Desarrollo de módulos de aprendizaje electrónicos.</h6>
+	  		<h6 class="padding-left-line">Soporte en actividades de integración escolar.</h6>
+	  		<h6 class="padding-left-line">Asesoría a alumnos en la implementación de proyectos electrónicos.</h6>
+	  		<h6 class="padding-left-line">Inventario de dispositivos y material electrónico.</h6>
+
+	  	</div>
+	  	<div>
+	  		<h4 class="padding-left-title name-bold" ng-bind="titles.capacitacion"></h4>
+	  		<h5 class="padding-left-subtitle">Dev Retreat Frontend – Retiró de Desarrollo de Software  [ 2014, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Devacademy</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Diplomado en Aplicaciones Móviles - Android [ 2014, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Universidad Ricardo Palma</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Desarrollo con Arduino y Android [ 2013, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Creatividad Ahora</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Java Fundamentals Developer [ 2013, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">CIBERTEC</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Programación e Integración de equipos Cellocator [ 2012, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Equipo Cellocator - Instalaciones de Hunter</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Equipos Satelitales Skywave [ 2010, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Equipo Skywave - Thunderbird Hotel</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Ensamblaje y Reparación de Computadoras [ 2006, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Universidad Ricardo Palma</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Configuración de Routers [ 2006, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Universidad Ricardo Palma</h6>
+
+
+	  	</div>
+	  	<div>
+	  		<h4 class="padding-left-title name-bold" ng-bind="titles.idiomas"></h4>
+	  		<h5 class="padding-left-subtitle">Inglés Básico e intermedio [ 2000, Lima – Perú ]</h5>
+	  		<h6 class="padding-left-line">Instituto ITAE</h6>	  		
+	  	</div>
+	  	<div>
+	  		<h4 class="padding-left-title name-bold" ng-bind="titles.conocimientos"></h4>
+	  		<h5 class="padding-left-subtitle">Electrónica:</h5>
+	  		<h6 class="padding-left-line">Elaboración de proyectos electrónicos para aplicaciones específicas.</h6>
+	  		<h6 class="padding-left-line">Diseño y Fabricación de Circuitos impresos PCB.</h6>
+	  		<h6 class="padding-left-line">Programación de Radios Motorola (Serie Pro).</h6>
+	  		<h6 class="padding-left-line">Programación de Microcontroladores (Microchip PIC, Atmel y Arduino).</h6>
+	  		<h6 class="padding-left-line">Programación de equipos modems GSM/GPRS, Satelitales e Híbridos.</h6>
+	  		<h6 class="padding-left-line">Manejo de sensores y dispositivos electrónicos (Bluetooth, Acelerómetro, Sensor de Temperatura, etc ).</h6>
+	  		<h6 class="padding-left-line">Manejo de ordenador de placa reducida Raspberry Pi.</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Informática y Sistemas:</h5>
+	  		<h6 class="padding-left-line">Desarrollo de aplicaciones Web y Móviles Nativas e Híbridas (Android).</h6>
+	  		<h6 class="padding-left-line">Lenguajes de programación Intermedio: Java, Android, JavaScript, HTML5, CSS.</h6>
+	  		<h6 class="padding-left-line">Lenguajes de programación Básico: PHP, Processing,C++, Visual Basic,Python.</h6>
+	  		<h6 class="padding-left-line">Frameworks Web y Movil: AngularJS, Ionic, jQuery, jQueryMobile, PhoneGap y Apache Cordova.</h6>
+	  		<h6 class="padding-left-line">Entornos de desarrollo integrado: Eclipse, Netbeans y Dreamweaver.</h6>
+	  		<h6 class="padding-left-line">Conocimiento y manejo básico de Stack MEAN(MongoDB - Express - AngularJS - Node.JS).</h6>
+	  		<h6 class="padding-left-line">Conocimiento básico de bases de datos SQL: MySQL y SQL Server.</h6>
+	  		<h6 class="padding-left-line">Conocimiento y manejo MS Office (Word, Excel, PowerPoint, Visio).</h6>
+	  		<h6 class="padding-left-line">Conocimiento y manejo de S.O. WindowsXP, Windows7, Windows8, Linux (Debian, Ubuntu, Raspbian).</h6>
+	  		<h6 class="padding-left-line">Conocimiento de patrón de arquitectura de software: MVC.</h6>
+	  		<h6 class="padding-left-line">Conocimiento de conceptos: Versionamiento, Backend, Frontend, UI, UX, Responsive Web Design.</h6>
+	  		<h6 class="padding-left-line">Conocimiento y manejo de Google SketchUp (Modelado 3D).</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Redes:</h5>
+	  		<h6 class="padding-left-line">Redes de datos (RS232, Ethernet).</h6>	  		
+	  		<h6 class="padding-left-line">Diseño de redes de datos locales LAN, WLAN.</h6>	  		
+	  		<h6 class="padding-left-line">Enlace de datos por módem GPRS.</h6>	  		
+	  	</div>
+	  	<div>
+	  		<h4 class="padding-left-title name-bold" ng-bind="titles.referencias"></h4>
+	  		<h5 class="padding-left-subtitle">Ing. Silvia Campos Benites</h5>
+	  		<h6 class="padding-left-line">Docente Universitaria en la Facultad de Ingeniería Informática de la Universidad Ricardo Palma.</h6>	  		
+	  		<h6 class="padding-left-line">Telf.: 995865570</h6>
+				<br>
+	  		<h5 class="padding-left-subtitle">Ing. Henry Dávila Ochoa</h5>
+	  		<h6 class="padding-left-line">Jefe del Área de Investigación y Desarrollo de Hunter Lojack Peru.</h6>	  		
+	  		<h6 class="padding-left-line">Telf.: 989263092</h6>
+
+	  	</div>
+	  	<div>
+	  		<h4 class="padding-left-title name-bold " ng-bind="titles.adicional"></h4>
+	  		<h6 class="padding-left-line">Fecha de nacimiento  07/01/1984 </h6>
+	  		<h6 class="padding-left-line">DNI: 42229018 </h6>
+	  		<h6 class="padding-left-line">Licencia de Conducir A-UNO: Q42229018</h6>
+	  		<h6 class="padding-left-line">Pasaporte N°: 6461658 </h6>
+	  		<h6 class="padding-left-line">Estado Civil: Soltero</h6>
+	  		<h6 class="padding-left-line">Conocimiento de las Rutas del Perú: Costa, Sierra y Selva.</h6>
+	  		<h6 class="padding-left-line">Hobbies: Tocar guitarra y Fútbol.</h6>
+	  	</div>		  	
+	  </div>
+  </div>
+  <br>
+	<code class="padding-left-name">Antes de imprimir este documento, piense bien si es necesario hacerlo: El medio ambiente es cuestión de todos.</code>
+	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script defer src="main.js"></script>
+</body>
+</html>
